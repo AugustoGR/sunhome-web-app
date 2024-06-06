@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-header',
@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHeaderComponent implements OnInit {
 
-  ngOnInit(): void {
-    // lint
+  @Input()
+  public routeName: string = '';
+
+  public title: string = '';
+
+  private routesTitle: { [key: string]: string } = {
+    '/landing': 'Sun Home'
+  };
+  
+  public ngOnInit(): void {
+    this.title = this.routesTitle[this.routeName] ?? '';
   }
 
 

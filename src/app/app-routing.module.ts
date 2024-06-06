@@ -12,7 +12,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./features/login/login.module').then((module) => module.LoginModule)
-    //component: LoginComponent
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./features/landing/landing.module').then((module) => module.LandingModule)
   },
   {
     path: '**',
