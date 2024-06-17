@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 export class PageFooterComponent {
 
   @Input()
-  public initialYear = 2019;
+  public initialYear = 2024;
 
   public currentYear = new Date().getFullYear();
 

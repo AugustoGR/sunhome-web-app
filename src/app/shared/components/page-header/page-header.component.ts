@@ -10,14 +10,20 @@ export class PageHeaderComponent implements OnInit {
   @Input()
   public routeName: string = '';
 
+  @Input()
+  public showHeader: boolean = false;
+
   public title: string = '';
 
   private routesTitle: { [key: string]: string } = {
     '/landing': 'Sun Home'
   };
-  
+
+  public get getTitle(): string {
+    return this.routesTitle[this.routeName] ?? '';
+  }
+
   public ngOnInit(): void {
-    this.title = this.routesTitle[this.routeName] ?? '';
   }
 
 

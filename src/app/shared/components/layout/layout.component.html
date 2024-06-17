@@ -1,6 +1,6 @@
 <div class="d-flex flex-column align-items-stretch align-self-stretch w-100 h-100">
 
-  <app-page-header *ngIf="showHeader" [routeName]="currentUrl"></app-page-header>
+  <app-page-header [showHeader]="showHeader" [routeName]="currentUrl"></app-page-header>
 
   <app-page-footer class="d-block" *ngIf="false" [initialYear]="2024"></app-page-footer>
 

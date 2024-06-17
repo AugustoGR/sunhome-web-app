@@ -21,6 +21,7 @@ export class LayoutComponent implements OnInit {
       filter((event) => event instanceof NavigationEnd)
     ).subscribe(() => {
       this.currentUrl = this.router.url;
+      console.log(this.currentUrl)
       if (this.currentUrl !== '/login') {
         this.showHeader = true;
       } else {
