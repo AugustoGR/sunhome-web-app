@@ -12,6 +12,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list'; 
+import { CredentialService } from "./services/credential.service";
+import { ProductService } from "./services/product.service";
 const components = [
   LayoutComponent,
   PageHeaderComponent,
@@ -32,7 +34,9 @@ const modules = [
 ];
 
 const providers = [
-  ApiService
+  ApiService,
+  CredentialService,
+  ProductService
 ]
 
 @NgModule({

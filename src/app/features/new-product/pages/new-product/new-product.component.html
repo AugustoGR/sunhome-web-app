@@ -1,0 +1,45 @@
+<div class="main-container">
+  <form [formGroup]="newProductForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <div class="page-title">Informações do produto:</div>
+      <div class="field-style">Descrição</div>
+      <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+      <div class="field-style">Valor de Compra</div>
+      <mat-form-field floatLabel="always">
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="buyValue" />
+        <span matTextPrefix>R$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+      <div class="field-style">Valor de Venda</div>
+      <mat-form-field floatLabel="always">
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="sellValue" />
+        <span matTextPrefix>R$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+      <div class="qtd-class">
+        <div>
+          <div class="field-style">Validade</div>
+          <mat-form-field>
+            <mat-label>Data</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="validity">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <div class="field-style">Quantidade</div>
+          <mat-form-field>
+            <mat-label>Qtd</mat-label>
+            <input matInput formControlName="qtd">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+    </div>
+  </form>
+</div>

@@ -17,6 +17,22 @@ const routes: Routes = [
     loadChildren: () => import('./features/landing/landing.module').then((module) => module.LandingModule)
   },
   {
+    path: 'newProduct',
+    loadChildren: () => import('./features/new-product/new-product.module').then((module) => module.NewProductModule)
+  },
+  {
+    path: 'product',
+    loadChildren: () => import('./features/product/product.module').then((module) => module.ProductModule)
+  },
+  {
+    path: 'revenue',
+    loadChildren: () => import('./features/revenue/revenue.module').then((module) => module.RevenueModule)
+  },
+  {
+    path: 'sell',
+    loadChildren: () => import('./features/sell/sell.module').then((module) => module.SellModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }

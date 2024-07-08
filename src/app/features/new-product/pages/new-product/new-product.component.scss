@@ -1,0 +1,47 @@
+.page-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.field-style{
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qtd-class {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}

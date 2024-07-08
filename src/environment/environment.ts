@@ -1,6 +1,5 @@
 export const environment = {
-  // appVersion: process.env['APP_VERSION'],
-  // baseUrl: process.env['BASE_URL']
-  appVersion: '1.0',
-  baseUrl: 'localhost'
+  appVersion: '1.0.0',
+  baseUrl: 'http://localhost:3000/',
+  accessTokenKey: 'accessToken'
 } as const;

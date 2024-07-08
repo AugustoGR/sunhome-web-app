@@ -16,7 +16,11 @@ export class PageHeaderComponent implements OnInit {
   public title: string = '';
 
   private routesTitle: { [key: string]: string } = {
-    '/landing': 'Sun Home'
+    '/landing': 'Sun Home',
+    '/newProduct': 'Cadastro de Produtos',
+    '/product': 'Produtos',
+    '/revenue': 'Faturamento',
+    '/sell': 'Registrar Venda',
   };
 
   public get getTitle(): string {
