@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductRoutingModule } from './product-routing.module';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 
 
 const MODULE_COMPONENTS = [
@@ -13,6 +15,8 @@ const MODULE_MODULES = [
   CommonModule,
   SharedModule,
   ProductRoutingModule,
+  MatInputModule,
+  MatTableModule
 ];
 
 @NgModule({

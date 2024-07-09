@@ -6,6 +6,9 @@ import { SellRoutingModule } from './sell-routing.module';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const MODULE_COMPONENTS = [
   SellComponent
@@ -18,6 +21,9 @@ const MODULE_MODULES = [
   MatSelectModule,
   MatInputModule,
   MatFormFieldModule,
+  MatTableModule,
+  MatCheckboxModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

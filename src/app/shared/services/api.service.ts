@@ -14,7 +14,7 @@ export class ApiService {
   ) { }
 
   private buildHeader(): HttpHeaders {
-    const token = localStorage.getItem(environment.accessTokenKey);
+    const token = sessionStorage.getItem(environment.accessTokenKey);
     return new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8', 'Authorization': `Bearer ${token}` });
   }
 

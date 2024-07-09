@@ -1,1 +1,27 @@
-<div>product page</div>
+<div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Filtro</mat-label>
+      <input matInput [(ngModel)]="textToFilter" (ngModelChange)="onChangeFilter()">
+    </mat-form-field>
+    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M4.25006 5.61C6.27006 8.2 10.0001 13 10.0001 13V19C10.0001 19.55 10.4501 20 11.0001 20H13.0001C13.5501 20 14.0001 19.55 14.0001 19V13C14.0001 13 17.7201 8.2 19.7401 5.61C20.2501 4.95 19.7801 4 18.9501 4H5.04006C4.21006 4 3.74006 4.95 4.25006 5.61Z"
+        fill="black" fill-opacity="0.56" />
+    </svg> -->
+
+  </div>
+  <table mat-table [dataSource]="filteredProductsScreen">
+    <ng-container matColumnDef="Produto">
+      <th mat-header-cell *matHeaderCellDef> Produto </th>
+      <td mat-cell *matCellDef="let element"> {{element.Produto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Quantidade">
+      <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+      <td mat-cell *matCellDef="let element"> {{element.Quantidade}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

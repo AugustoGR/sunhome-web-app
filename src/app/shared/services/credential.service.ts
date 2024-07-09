@@ -13,7 +13,7 @@ export class CredentialService {
   constructor(private readonly apiService: ApiService) { }
 
   private saveAccessToken(token: string): void {
-    localStorage.setItem(environment.accessTokenKey, token);
+    sessionStorage.setItem(environment.accessTokenKey, token);
   }
 
   public isLoggedIn(): boolean {
@@ -21,11 +21,11 @@ export class CredentialService {
   }
 
   public getAccessToken(): string | null {
-    return localStorage.getItem(environment.accessTokenKey);
+    return sessionStorage.getItem(environment.accessTokenKey);
   }
 
   public logout(): void {
-    localStorage.removeItem(environment.accessTokenKey);
+    sessionStorage.removeItem(environment.accessTokenKey);
   }
 
   public login(login: Login): Observable<void> {

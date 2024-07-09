@@ -1,4 +1,4 @@
-export interface GetProductVariations {
+export interface GetProductStock {
   id: string
   description: string
   buyValue: string

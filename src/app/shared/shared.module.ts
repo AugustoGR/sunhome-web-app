@@ -14,6 +14,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list'; 
 import { CredentialService } from "./services/credential.service";
 import { ProductService } from "./services/product.service";
+import { SellService } from "./services/sell.service";
 const components = [
   LayoutComponent,
   PageHeaderComponent,
@@ -36,7 +37,8 @@ const modules = [
 const providers = [
   ApiService,
   CredentialService,
-  ProductService
+  ProductService,
+  SellService
 ]
 
 @NgModule({
