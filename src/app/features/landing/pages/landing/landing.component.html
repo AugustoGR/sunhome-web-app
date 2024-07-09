@@ -1,11 +1,11 @@
 <div class="main-container">
   <div class="header-container">
-    <div>Lucros do mês</div>
-    <div>(maio)</div>
-    <div>R$ 2.322,56</div>
+    <div class="profit-title">Lucros do mês</div>
+    <div class="month-text">({{monthName}})</div>
+    <div class="profit-text">{{profit}}</div>
   </div>
   <div class="container-section">
-    <div>Acesso Rápido</div>
+    <div class="acesso-rapido">Acesso Rápido</div>
     <div class="button-row">
       <div class="button-container" (click)="onClickNavigate('sell')">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div>
-      <div>Produtos próximos da validade:</div>
+      <div class="validade">Produtos próximos da validade:</div>
       <div>
         <table mat-table [dataSource]="products">
           <ng-container matColumnDef="Descricao">

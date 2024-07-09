@@ -1,6 +1,7 @@
 export interface SaleInfo {
   id: string
   clientName: string
+  createdAt:Date
   SaleProductVariation: SaleProductVariation[]
 }
 

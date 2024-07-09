@@ -32,3 +32,10 @@ main {
   flex-direction: row;
   align-items: center;
 }
+
+::ng-deep span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RevenueComponent } from './pages/revenue/revenue.component';
 import { RevenueRoutingModule } from './revenue-routing.module';
+import { MatTableModule } from '@angular/material/table';
 
 
 const MODULE_COMPONENTS = [
@@ -13,6 +14,7 @@ const MODULE_MODULES = [
   CommonModule,
   SharedModule,
   RevenueRoutingModule,
+  MatTableModule
 ];
 
 @NgModule({

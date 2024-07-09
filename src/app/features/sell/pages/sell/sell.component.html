@@ -1,11 +1,11 @@
 <div class="main-container">
   <div class="form-container">
-    <div>Informações da venda:</div>
+    <div class="sale-info">Informações da venda:</div>
     <mat-form-field appearance="fill">
       <mat-label>Cliente</mat-label>
       <input matInput [(ngModel)]="clientName">
     </mat-form-field>
-    <div>Produtos</div>
+    <div class="product">Produtos</div>
     <table mat-table [dataSource]="productsVariations">
 
       <ng-container matColumnDef="select">
