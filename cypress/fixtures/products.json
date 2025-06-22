@@ -1,0 +1,9 @@
+
+{
+  "id": "PROD-001",
+  "descricao": "Produto de Teste Cypress",
+  "valor_compra": 25.50,
+  "tipo_produto": "Eletrônico",
+  "quantidade": 10,
+  "validade": "2025-12-31"
+}

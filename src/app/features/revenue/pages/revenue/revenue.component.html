@@ -1,18 +1,18 @@
 <div class="main-container">
   <div class="month-text">{{currentMonth}}</div>
-  <div class="revenue-container"> 
+  <div class="revenue-container">
     <div class="revenue-box">
       <div class="upper-text">Lucros</div>
-      <div class="lower-text">{{profit}}</div>
+      <div class="lower-text" data-cy="profit">{{profit}}</div>
     </div>
     <div class="revenue-box">
       <div class="upper-text">Faturamento</div>
-      <div class="lower-text">{{revenue}}</div>
+      <div class="lower-text" data-cy="revenue">{{revenue}}</div>
     </div>
   </div>
   <div class="history-container">
     <div class="history-text">Historico de venda</div>
-    <table *ngIf="saleInfoScreen && saleInfoScreen.length > 0" mat-table [dataSource]="saleInfoScreen">
+    <table *ngIf="saleInfoScreen && saleInfoScreen.length > 0" mat-table [dataSource]="saleInfoScreen" data-cy="history-table">
       <ng-container matColumnDef="Descricao">
         <th mat-header-cell *matHeaderCellDef> Descricao </th>
         <td mat-cell *matCellDef="let element"> {{element.Descricao}} </td>

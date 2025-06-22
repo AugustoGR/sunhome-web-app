@@ -3,22 +3,24 @@
     <div class="sale-info">Informações da venda:</div>
     <mat-form-field appearance="fill">
       <mat-label>Cliente</mat-label>
-      <input matInput [(ngModel)]="clientName">
+      <input matInput [(ngModel)]="clientName" data-cy="customer">
     </mat-form-field>
     <div class="product">Produtos</div>
     <table mat-table [dataSource]="productsVariations">
 
       <ng-container matColumnDef="select">
         <th mat-header-cell *matHeaderCellDef>
-          <mat-checkbox (change)="$event ? masterToggle() : null" 
+          <mat-checkbox (change)="$event ? masterToggle() : null"
                         [checked]="isAllSelected()"
-                        [indeterminate]="isIndeterminate()">
+                        [indeterminate]="isIndeterminate()"
+                        data-cy="select-all-checkbox">
           </mat-checkbox>
         </th>
         <td mat-cell *matCellDef="let element">
           <mat-checkbox (click)="$event.stopPropagation()"
                         (change)="$event ? toggleSelection(element) : null"
-                        [checked]="selection.isSelected(element)">
+                        [checked]="selection.isSelected(element)"
+                        data-cy="product">
           </mat-checkbox>
         </td>
       </ng-container>
@@ -27,7 +29,7 @@
         <th mat-header-cell *matHeaderCellDef> Produto </th>
         <td mat-cell *matCellDef="let element"> {{element.Produto}} </td>
       </ng-container>
-  
+
       <ng-container matColumnDef="Valor">
         <th mat-header-cell *matHeaderCellDef> Valor </th>
         <td mat-cell *matCellDef="let element"> R$ {{element.Valor}},00 </td>
@@ -37,7 +39,7 @@
     </table>
     <mat-form-field appearance="fill">
       <mat-label>Valor Total</mat-label>
-      <input matInput [ngModel]="sumValue" [disabled]="true">
+      <input matInput [ngModel]="sumValue" [disabled]="true" data-cy="total-value">
     </mat-form-field>
   </div>
   <div class="button-container">

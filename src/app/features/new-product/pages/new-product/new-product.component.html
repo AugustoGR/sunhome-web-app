@@ -5,17 +5,17 @@
       <div class="field-style">Descrição</div>
       <mat-form-field>
         <mat-label>Descrição</mat-label>
-        <textarea matInput formControlName="description"></textarea>
+        <textarea matInput formControlName="description" data-cy="description"></textarea>
       </mat-form-field>
       <div class="field-style">Valor de Compra</div>
       <mat-form-field floatLabel="always">
-        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="buyValue" />
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="buyValue" data-cy="buy-value"/>
         <span matTextPrefix>R$&nbsp;</span>
         <span matTextSuffix>.00</span>
       </mat-form-field>
       <div class="field-style">Valor de Venda</div>
       <mat-form-field floatLabel="always">
-        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="sellValue" />
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="sellValue" data-cy="sell-value"/>
         <span matTextPrefix>R$&nbsp;</span>
         <span matTextSuffix>.00</span>
       </mat-form-field>
@@ -24,7 +24,7 @@
           <div class="field-style">Validade</div>
           <mat-form-field>
             <mat-label>Data</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="validity">
+            <input matInput [matDatepicker]="picker" formControlName="validity" data-cy="validity" readonly="false">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
@@ -33,13 +33,13 @@
           <div class="field-style">Quantidade</div>
           <mat-form-field>
             <mat-label>Qtd</mat-label>
-            <input matInput formControlName="qtd">
+            <input matInput formControlName="qtd" data-cy="qtd">
           </mat-form-field>
         </div>
       </div>
     </div>
     <div class="button-container">
-      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+      <button mat-raised-button color="primary" type="submit" data-cy="submit-button">Cadastrar</button>
     </div>
   </form>
 </div>
